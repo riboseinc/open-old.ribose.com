@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+<div class="container minimal-padding">
+  <div class="page-feature-content">
+    <h1>The headline that introduces the Ribose OSS site goes here.</h1>
+    <p>This can be a more subtle tagline underneath about what Ribose OSS offers.</p>
+  </div>
+</div>
+
+<div class="featured-projects">
+    <div class="project">
+      <div class="project-inner">
+        <a href="/project1(rename)">
+          <div class="project-icon"></div>
+          <h4 class="project-title">Name of Project</h4>
+        </a>
+        <p>This is the description of the open source item that you want to feature here. It should span a few lines, and entice the user to continue.</p>
+      </div>
+    </div>
+
+   <div class="project">
+      <div class="project-inner">
+        <a href="/project1(rename)">
+          <div class="project-icon"></div>
+          <h4 class="project-title">Name of Project</h4>
+        </a>
+        <p>This is the description of the open source item that you want to feature here. It should span a few lines, and entice the user to continue.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-inner">
+        <a href="/project1(rename)">
+          <div class="project-icon"></div>
+          <h4 class="project-title">Name of Project</h4>
+        </a>
+        <p>This is the description of the open source item that you want to feature here. It should span a few lines, and entice the user to continue.</p>
+      </div>
+    </div>
+  
+</div>
+
+<div class="content">
+  <div class="half">
+    <div class="half-inner">
+      <h1>Our Projects</h1>
+      <div class="posts">
+        <div class="post">
+          <h2>Project Name One</h2>
+          <p>This is a short description of the project, to which you’ll link below on Github. This is an area where you can simply list projects, instead of featuring them above.</p>
+          <a href="#">View on Github</a>
+        </div>
+        <div class="post">
+          <h2>Project Name One</h2>
+          <p>This is a short description of the project, to which you’ll link below on Github. This is an area where you can simply list projects, instead of featuring them above.</p>
+          <a href="#">View on Github</a>
+        </div>
+        <div class="post">
+          <h2>Project Name One</h2>
+          <p>This is a short description of the project, to which you’ll link below on Github. This is an area where you can simply list projects, instead of featuring them above.</p>
+          <a href="#">View on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="half">
+    <div class="half-inner">
+      <h1>Latest Blog Announcements</h1>
+      <div class="posts">
+        {% for post in site.posts %}
+          <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.description }}</p>
+            <a href="{{ post.url | prepend: site.baseurl }}">Read More</a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

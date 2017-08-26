@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<div class="container">
+	<div class="page-header blog-header">
+		<div class="page-announcement blog-announcement">
+			<div class="page-announcement-inner blog-announcement-inner">
+				<span class="date">8.3.17</span>
+				<h1>Ribose-Ruby Release Announcement.</h1>
+				<p>We’re so excited to announce the release of ribose-ruby, the ruby interface for the ribose api. This is a section in which you describe the blog post.</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+		<div class="categories">
+			<h1>Categories</h1>
+			<div class="categories-inner">
+				{% for category in site.categories %}
+					<div class="category"><p><a href="/tags/#{{ category | first }}">{{ category | first }}</a></p></div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="posts">
+		{% for post in site.posts %}
+          <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.description }}</p>
+            <div class="category-tags">
+            	{% for category in post.categories %}
+            		<div class="tag">
+            			<p>{{ category }}</p>
+              		</div>
+            	{% endfor %}
+            </div>
+            <a href="{{ post.url | prepend: site.baseurl }}">Read More</a>
+          </div>
+        {% endfor %}
+	</div>
+</div>
