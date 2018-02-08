@@ -1,0 +1,24 @@
+= Ribose Open Source
+
+== Setup
+
+[source]
+----
+webpack -w
+----
+
+[source]
+----
+bundle 
+bundle exec jekyll serve
+----
+
+[source]
+----
+$ npm install webpack babel-core babel-loader babel-preset-es2015 babel-preset-react react react-addons-update react-dom --save-dev
+----
+
+== TODOs
+
+* Use https://github.com/jekyll/jekyll-assets[Jekyll Assets]
+
